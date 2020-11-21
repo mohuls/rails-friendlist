@@ -1,0 +1,14 @@
+<div class="ui text container">
+  <h1>Editing Friend</h1>
+
+  <%= render 'form', friend: @friend %>
+
+  <br/>
+  <div class="ui buttons">
+    <%= link_to 'Back', friends_path, class: "ui button" %>
+    <div class="or"></div>
+    <%= link_to 'Show', @friend, class: "ui positive button" %>
+  </div>
+  <br/>
+  <br/>
+</div>

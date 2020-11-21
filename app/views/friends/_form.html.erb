@@ -1,0 +1,49 @@
+<%= form_with(model: friend, local: true) do |form| %>
+  <% if friend.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
+
+      <ul>
+        <% friend.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br/>
+  <div class="ui raised very padded text container segment">
+  <div class="ui huge form">
+    <div class="two fields">
+      <div class="field">
+      <%= form.label :frist_name %>
+        <%= form.text_field :frist_name, placeholder: "first name" %>
+      </div>
+
+      <div class="field">
+      <%= form.label :last_name %>
+        <%= form.text_field :last_name, placeholder: "last name" %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.text_field :email, placeholder: "email" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :phone %>
+      <%= form.text_field :phone, placeholder: "phone" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :twitter %>
+      <%= form.text_field :twitter, placeholder: "twitter" %>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <div class="actions">
+    <%= form.submit class: 'ui positive button' %>
+  </div>
+  </div>
+<% end %>

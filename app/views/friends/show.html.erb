@@ -1,0 +1,44 @@
+<div class="ui card">
+  <div class="content">
+    <div class="header"><%= @friend.last_name %>'s Profile</div>
+    <div class="meta">Added 19 days ago</div>
+    <div class="description">
+      <div class="ui list">
+        <div class="item">
+          <i class="user icon"></i>
+          <div class="content">
+            <%= @friend.frist_name %> <%= @friend.last_name %>
+          </div>
+        </div>
+        <div class="item">
+          <i class="phone icon"></i>
+          <div class="content">
+            <%= @friend.phone %>
+          </div>
+        </div>
+        <div class="item">
+          <i class="mail icon"></i>
+          <div class="content">
+            <a href="mailto:<%= @friend.email %>"><%= @friend.email %></a>
+          </div>
+        </div>
+        <div class="item">
+          <i class="twitter icon"></i>
+          <div class="content">
+            <%= @friend.twitter %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="extra content">
+    <i class="check icon"></i>
+    121 times seen
+  </div>
+</div>
+<br/>
+<div class="ui buttons">
+  <%= link_to 'Back', friends_path, class: "ui button" %>
+  <div class="or"></div>
+  <%= link_to 'Edit', edit_friend_path(@friend), class: "ui positive button" %>
+</div>
