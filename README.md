@@ -1,23 +1,2 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-To deploy this project
+# Ruby on Rails Beginner
+Note: Every time after cloning a branch run: `bundle install` to install dependences and then run either `yarn install --check-files` or `bundle exec rake webpacker:install` or `$ rails webpacker:install` which is working. Then run `$ rails s` to start the dev server.
