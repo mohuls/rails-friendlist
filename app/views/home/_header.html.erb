@@ -1,6 +1,16 @@
 <div class="ui top fixed inverted menu">
-  <%= link_to 'Friend List', root_path, class: 'item'%>
-  <%= link_to 'All Friends', friends_path, class: "item" %>
-  <%= link_to 'Add Friend', new_friend_path, class: "item" %>
+  <%= link_to '<i class="inverted asterisk green large loading icon"></i>Friend List'.html_safe, root_path, class: 'ui header item'%>
+  <% if user_signed_in? %>
+    <%= link_to 'All Friends', friends_path, class: "item" %>
+    <%= link_to 'Add Friend', new_friend_path, class: "item" %>
+  <% end %>
+  <% if user_signed_in? %>
+    <%= link_to 'Edit profile', edit_user_registration_path, class: "item" %>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "item" %>
+    <%= @current_member %>
+  <% else %>
+    <%= link_to 'Sign up', new_user_registration_path, class: "item" %>
+    <%= link_to 'Sign in', new_user_session_path, class: "item" %>
+  <% end %>
   <%= link_to 'About Us', home_about_path, class: "item" %>
 </div>
